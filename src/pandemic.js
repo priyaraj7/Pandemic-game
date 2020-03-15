@@ -1,54 +1,50 @@
-export class Player {
+export class Patient {
+  constructor() {
+    this.infectionLevel = 0;
+  }
 
-    constructor(name) {
-        this.name = name;
+  startInfection() {
+    const intervalHandler = setInterval(() => {
+      this.infectionLevel += Math.floor(Math.random() * 6 + 1);
+      if (this.isDead()) {
+        clearInterval(intervalHandler);
+      }
+    }, 1000);
+  }
 
-        this.infectionLevel = 0;
-
+  isDead() {
+    if (this.infectionLevel >= 100) {
+      return true;
+    } else {
+      return false;
     }
-    //;
-    // infectionRate() {
-    //     return Math.floor(Math.random() * (7 - 1) + 1)
-    // }
-
-    // setTimeout(infectionRate() {
-    //     alert()
-    // }, 0);
-
-    // setTimeout(function() {
-    //     alert("Hello friend! Maybe you should sign up for our newsletter!");
-    // }, 20000);
-
-    // setTimeout() {
-    //     infectionRate(()
-    // } 0);
-
-    // gameEnds() {
-    //     setTimeout(() => {
-    //         ;
-    //     }, 60000);
-    // }
-    infectionRate() {
-        setInterval(() => {
-            this.infectionLevel += Math.floor(Math.random() * (7 - 1) + 1);
-        }, 1000)
+  }
+  hasWon() {
+    if (this.infectionLevel <= 1) {
+      return true;
+    } else {
+      return false;
     }
+  }
 
-    pandemicDeath1() {
-        setTimeout(() => {
-            this.infectionLevel = 100;
-        }, 60000);
-    }
+  cure(callback) {
+    setTimeout(() => {
+      // console.log(`Math.floor(${Math.random()} * (7 - 1) + 1) => ${Math.floor(Math.random() * (7 - 1) + 1)}`);
+      this.infectionLevel -= Math.floor(Math.random() * (7 - 1) + 1);
+      this.infectionLevel = Math.max(0, this.infectionLevel);
+      if (callback && typeof callback === "function") {
+        callback();
+      }
+    }, 1001);
+  }
 
-    pandemicDeath() {
-        if (this.infectionLevel >= 100) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    //     nurse() {
-    //         this.lifeForce = 10;
-    //     }
+  cure2(callback) {
+    setTimeout(() => {
+      this.infectionLevel -= Math.floor(Math.random() * (8 - 4) + 4); // to get random number between 8 and 4
+      this.infectionLevel = Math.max(0, this.infectionLevel); // for avoiding -ve integer
+      if (callback && typeof callback === "function") {
+        callback();
+      }
+    }, 1001);
+  }
 }

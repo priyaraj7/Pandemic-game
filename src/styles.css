@@ -1,3 +1,34 @@
-body {
-    background-color: red;
-  }
+.square {
+  background: lightskyblue;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 10px;
+  text-align: center;
+}
+
+.square .status {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: red;
+}
+h1 {
+  text-align: center;
+}
+#start {
+  background-color: green;
+  color: aliceblue;
+}
+button {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+#nurse {
+  background-color: yellowgreen;
+}
+#doctor {
+  background-color: turquoise;
+}

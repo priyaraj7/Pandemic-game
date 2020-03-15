@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Pandemic</title>
+  </head>
+  <div class="jumbotron">
+    <h1>Pandemic Clone</h1>
+  </div>
+  <body>
+    <div class="container">
+      <button type="submit" id="start">Click here to Start the Game</button>
+      <br />
 
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> -->
-  <!-- <script type="text/javascript" src="bundle.js"></script> -->
+      <div class="square">
+        Patient Status
+        <div class="status"></div>
+      </div>
 
-  <title>Solar Clock</title>
-</head>
+      <p>Infection Level: <span id="infection"></span></p>
 
-<body>
-  <form id="solar-form">
-    <label for="age">Enter a number:</label>
-    <input id="age" type="number">
-    <button type="submit">Submit</button>
-  </form>
-  <ul id="solution"></ul>
-</body>
+      <p>Press the button to help the patient.</p>
+      <button type="submit" id="nurse">Nurse</button>
+      <button type="submit" id="doctor">Doctor</button>
 
+      <ul id="solution"></ul>
+    </div>
+  </body>
 </html>
