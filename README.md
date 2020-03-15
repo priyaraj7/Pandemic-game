@@ -7,7 +7,7 @@ By _**Supriya & Jesse Callahan**_</br>
 
 Pandemic is a cooperative board game where players have to stop a deadly disease outbreak before it wipes out the planet.
 
-To see this webpage [click here](https://priyaraj7.github.io/Pandemic-game/dist/)
+To see this webpage [click here](https://priyaraj7.github.io/Pandemic-game/dist/index.html)
 
 ## Setup/Installation Requirements
 
